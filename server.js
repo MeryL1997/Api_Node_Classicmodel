@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/1/cliente",
     (req, res) => {
-        dbConn.query('SELECT * FROM cliente_mayor_compras', function(err,rows) {
+        dbConn.query('SELECT * FROM classicmodels.Cliente_mayor_cantidad_compras', function(err,rows) {
             if(err) {
                res.send(err)
             } else {
@@ -19,7 +19,7 @@ app.get("/1/cliente",
     });
 app.get("/1/producto",
     (req, res) => {
-        dbConn.query('SELECT * FROM producto_mas_vendido', function(err,rows) {
+        dbConn.query('SELECT * FROM classicmodels.Productos_Mas_Vendido', function(err,rows) {
             if(err) {
                 res.send(err)
             } else {
